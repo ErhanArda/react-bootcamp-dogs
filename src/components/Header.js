@@ -37,7 +37,31 @@ const Header = () => {
                                 </NavItem>
                             })
                         }
-
+                        {
+                            /*
+                                <NavItem>
+                                    <NavLink>
+                                        <Link to="/">
+                                            Home Page
+                                        </Link>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink>
+                                        <Link to="/breed/golden-retriever">
+                                        Goldens
+                                        </Link>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink>
+                                        <Link to="/about">
+                                            About
+                                        </Link>
+                                    </NavLink>
+                                </NavItem>
+                            */
+                        }
                     </Nav>
                     <NavbarText>Simple Text</NavbarText>
                 </Collapse>

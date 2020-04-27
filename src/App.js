@@ -29,6 +29,7 @@ class App extends Component {
             <Route path="/" exact component={HomePage} />
             <Route path="/about" component={About} />
             <Route path="/breed/writtenBreed" component={FilteredDogs}/>
+            <Route component = {()=><div><h1>404 not </h1></div>}
             */
           }
         </Switch>
