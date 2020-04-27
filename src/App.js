@@ -4,6 +4,9 @@ import Header from './components/Header'
 import { Switch, Route } from 'react-router';
 
 import routes from './routes'
+import HomePage from './containers/HomePage';
+import About from './containers/About';
+import FilteredDogs from './containers/FilteredDogs';
 
 class App extends Component {
 
@@ -21,6 +24,13 @@ class App extends Component {
             })
           }
 
+          {
+            /*
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about" component={About} />
+            <Route path="/breed/writtenBreed" component={FilteredDogs}/>
+            */
+          }
         </Switch>
       </div>
     )
