@@ -14,16 +14,20 @@ class HomePage extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
+        /* local storage 
         this.setState({
             favorites:window.localStorage.getItem("favorites")?
             JSON.parse(window.localStorage.getItem("favorites")): []
         })
 
-        axios.get(`${apiHost}/favorites`).then((result)=>{
-            console.log("Axios Result", result); 
-        }).catch((err)=>{
-            console.log("Axios err",err)
+        */
+        axios.get(`${apiHost}/favorites`).then((result) => {
+            this.setState({
+                favorites: result.data
+            })
+        }).catch((err) => {
+            console.log("Axios err", err)
         })
     }
 
@@ -32,19 +36,28 @@ class HomePage extends Component {
 
 
     toggle = (dogId) => {
-        const foundDog = this.state.favorites.find((favorite) => favorite === dogId)
+        const foundDog = this.state.favorites.find((favorite) => favorite.dogId === dogId)
         if (foundDog) {
             this.setState({
-                favorites: this.state.favorites.filter((dog) => dog !== dogId)
-            },()=>{
-                window.localStorage.setItem("favorites",JSON.stringify(this.state.favorites));
+                favorites: this.state.favorites.filter((dog) => dog.dogId !== dogId)
+            }, () => {
+                // window.localStorage.setItem("favorites",JSON.stringify(this.state.favorites));
             })
         } else {
             this.setState({
                 favorites: [...this.state.favorites, dogId]
-            },()=>{
-                window.localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
-
+            }, () => {
+                //window.localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
+                axios.post(`${apiHost}/favorites`, {
+                    dogId
+                }).then((result) => {
+                    const addedFav = result.data
+                    this.setState({
+                        favorites: [...this.state.favorites, addedFav]
+                    })
+                }).catch((err) => {
+                    console.log(err)
+                })
             })
         }
     }
@@ -60,7 +73,7 @@ class HomePage extends Component {
                 <ul>
                     {
                         dogs.map((dog) => {
-                            return <Dog id={dog.id} toggle={this.toggle} getStatus={this.getStatus} {...dog}/>
+                            return <Dog id={dog.id} toggle={this.toggle} getStatus={this.getStatus} {...dog} />
                         })
                     }
                 </ul>
