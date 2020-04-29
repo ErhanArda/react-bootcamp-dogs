@@ -7,7 +7,7 @@ const Dog = ({ id, name, toggle, getStatus }) => {
         <li key={id} style={{
             margin: "15px"
         }}>
-            <Link to={`/details/${name}`}
+            <Link to={`/details/${id}`}
             style={{
                 display: "inline-block",
                 marginRight: "15px"

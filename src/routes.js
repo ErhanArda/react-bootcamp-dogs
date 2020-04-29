@@ -17,7 +17,7 @@ const routes = [
         title: "Filtered Dogs"
     },
     {
-        path: "/details/:writtenDog",
+        path: "/details/:writtenDogId",
         isExact: false,
         component: DogDetails,
         title: "Dog Details"
