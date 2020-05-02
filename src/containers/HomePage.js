@@ -80,7 +80,7 @@ class Homepage extends React.Component {
     render() {
         if (this.state.loadingFavorites) {
             return <div>
-                <h1>Sayfa Yukleniyor.....</h1>
+                <h1>Page is loading.....</h1>
             </div>
         }
         return (
