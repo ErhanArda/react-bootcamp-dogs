@@ -5,7 +5,7 @@ import DogDetails from './containers/DogDetails'
 
 const routes = [
     {
-        path: "/react-bootcamp-dogs/",
+        path: "/react-bootcamp-dogs",
         isExact: true,
         component: HomePage,
         title: "Home Page"

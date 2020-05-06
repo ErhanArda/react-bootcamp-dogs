@@ -1,7 +1,7 @@
 
 const navs = [
     {
-        path: "/",
+        path: "/react-bootcamp-dogs",
         title: "HomePage"
     },
     {
