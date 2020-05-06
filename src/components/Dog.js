@@ -9,7 +9,7 @@ import {
 
 
 
-const Dog = ({ id, name, image, description, toggle, getStatus, disabledButton, disabledFavoriteFeature }) => {
+const Dog = ({ id, name, image, description, toggle, getStatus, disabledButton, disabledFavoriteFeature,disabledDetails }) => {
     return (
         <div key={id} style={{margin:"15px"}}>
 
@@ -24,11 +24,13 @@ const Dog = ({ id, name, image, description, toggle, getStatus, disabledButton, 
                     <CardText>
                         {description}
                     </CardText>
-                    <Button color="primary" className="a">
+                    {
+                        
+                        !disabledDetails && <Button color="primary" className="a" disabledDetails={disabledDetails}>
                         <Link to={`/details/${id}`}>
                             Details
                             </Link>
-                    </Button>
+                    </Button>}
                     {
                         !disabledFavoriteFeature && <FavoriteActions toggle={toggle} id={id} getStatus={getStatus} disabledButton={disabledButton}/>
                     }

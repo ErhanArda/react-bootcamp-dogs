@@ -17,7 +17,7 @@ const DogDetails = (props) => {
         <div>
             <Row>
                 <Col xs={12} md={6}>
-                <Dog {...showDogs} disabledFavoriteFeature={true}/>
+                <Dog {...showDogs} disabledFavoriteFeature={true} disabledDetails={true}/>
 
                 </Col>
             </Row>
