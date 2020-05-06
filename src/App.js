@@ -7,6 +7,7 @@ import routes from './routes'
 import HomePage from './containers/HomePage';
 import About from './containers/About';
 import FilteredDogs from './containers/FilteredDogs';
+import { Container } from 'reactstrap';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Container>
         <Switch>
           {
             routes.map((route) => {
@@ -33,6 +35,7 @@ class App extends Component {
             */
           }
         </Switch>
+        </Container>
       </div>
     )
   }

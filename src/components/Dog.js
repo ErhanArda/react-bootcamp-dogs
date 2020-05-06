@@ -1,24 +1,41 @@
 import React from 'react'
 import FavoriteActions from '../components/FavoriteActions'
 import { Link } from "react-router-dom"
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+} from 'reactstrap';
+import styles from "./styles.css"
 
-const Dog = ({ id, name, toggle, getStatus, disabledButton }) => {
+
+
+
+const Dog = ({ id, name, image, description, toggle, getStatus, disabledButton, disabledFavoriteFeature }) => {
     return (
-        <div className="card">
-            <p key={id} style={{
-                margin: "30px"
-            }}>
-                <Link to={`/details/${id}`}
-                    style={{
-                        display: "inline-block",
-                        marginRight: "30px"
-                    }}>
-                    {name}
-                </Link>
-                <FavoriteActions toggle={toggle} id={id}
-                    getStatus={getStatus} disabledButton={disabledButton}
-                />
-            </p>
+        <div key={id} style={{margin:"15px"}}>
+
+            <Card>
+                <CardImg top width="100%" src={image} alt={name} className="dog-image"/>
+                <CardBody>
+                    <CardTitle>
+                        <span>
+                            {name}
+                        </span>
+                    </CardTitle>
+                    <CardText>
+                        {description}
+                    </CardText>
+                    <Button color="primary">
+                        <Link to={`/details/${id}`}>
+                            Details
+                            </Link>
+                    </Button>
+                    {
+                        !disabledFavoriteFeature && <FavoriteActions toggle={toggle} id={id} getStatus={getStatus} disabledButton={disabledButton}/>
+                    }
+
+                </CardBody>
+            </Card>
         </div>
     )
 }

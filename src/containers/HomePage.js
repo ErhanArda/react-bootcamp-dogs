@@ -4,6 +4,7 @@ import dogs from "../dogsdata";
 // import FavoriteActions from "../components/FavoriteActions";
 import Dog from "../components/Dog";
 import axios from "axios";
+import { Row,Col } from 'reactstrap';
 
 
 const apiHost = "https://5ea56a222d86f00016b45ccd.mockapi.io"
@@ -86,11 +87,15 @@ class Homepage extends React.Component {
         return (
             <div>
                 <ul>
+                    <Row>
                     {
                         dogs.map((dog) => {
-                            return <Dog toggle={this.toggle} id={dog.id} getStatus={this.getStatus} disabledButton={this.state.disabledButton} {...dog} />
+                            return <Col xs={12} md={6} lg={4}>
+                                    <Dog toggle={this.toggle} id={dog.id} getStatus={this.getStatus} disabledButton={this.state.disabledButton} {...dog} />
+                                    </Col>
                         })
                     }
+                    </Row>  
                 </ul>
             </div>
         );

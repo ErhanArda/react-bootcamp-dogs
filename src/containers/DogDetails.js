@@ -1,18 +1,28 @@
 import React from 'react'
 import dogs from '../dogsdata'
+import Dog from '../components/Dog'
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
 } from 'reactstrap';
-import "./styles.css";
+import { Row,Col } from 'reactstrap';
 
 const DogDetails = (props) => {
     const selectedDog = props.match.params.writtenDogId;
     const showDogs = dogs.find((dog) => dog.id === selectedDog)
-
+    if(!showDogs){
+    return <h2>{selectedDog} dogs not found!</h2>
+    }
     return (
         <div>
-            <Card className="card">
+            <Row>
+                <Col xs={12} md={6}>
+                <Dog {...showDogs} disabledFavoriteFeature={true}/>
+
+                </Col>
+            </Row>
+
+            {/* <Card className="card">
                     <CardImg width="100%" src={showDogs.image} alt="Card image cap" />
                     <CardBody >
                         <CardTitle>
@@ -21,9 +31,9 @@ const DogDetails = (props) => {
                         <CardSubtitle>{showDogs.age}</CardSubtitle>
                         <CardText>{showDogs.description}</CardText>
                     </CardBody>
-                </Card>
-    </div>
-        
+                </Card> */}
+        </div>
+
     )
 }
 
