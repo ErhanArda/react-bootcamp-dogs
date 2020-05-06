@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-bootcamp-dogs/static/css/main.4320ffbe.chunk.css",
-    "main.js": "/react-bootcamp-dogs/static/js/main.2e1fb926.chunk.js",
-    "main.js.map": "/react-bootcamp-dogs/static/js/main.2e1fb926.chunk.js.map",
+    "main.css": "/react-bootcamp-dogs/static/css/main.70382b8a.chunk.css",
+    "main.js": "/react-bootcamp-dogs/static/js/main.4ebbc494.chunk.js",
+    "main.js.map": "/react-bootcamp-dogs/static/js/main.4ebbc494.chunk.js.map",
     "runtime-main.js": "/react-bootcamp-dogs/static/js/runtime-main.8eaeebfe.js",
     "runtime-main.js.map": "/react-bootcamp-dogs/static/js/runtime-main.8eaeebfe.js.map",
     "static/css/2.69121389.chunk.css": "/react-bootcamp-dogs/static/css/2.69121389.chunk.css",
-    "static/js/2.12045a22.chunk.js": "/react-bootcamp-dogs/static/js/2.12045a22.chunk.js",
-    "static/js/2.12045a22.chunk.js.map": "/react-bootcamp-dogs/static/js/2.12045a22.chunk.js.map",
+    "static/js/2.fa221dae.chunk.js": "/react-bootcamp-dogs/static/js/2.fa221dae.chunk.js",
+    "static/js/2.fa221dae.chunk.js.map": "/react-bootcamp-dogs/static/js/2.fa221dae.chunk.js.map",
     "index.html": "/react-bootcamp-dogs/index.html",
-    "precache-manifest.d7bdffc859e3abedf7452b24409eef95.js": "/react-bootcamp-dogs/precache-manifest.d7bdffc859e3abedf7452b24409eef95.js",
+    "precache-manifest.da1353a2b8e5a6938b1708c57fbc55ce.js": "/react-bootcamp-dogs/precache-manifest.da1353a2b8e5a6938b1708c57fbc55ce.js",
     "service-worker.js": "/react-bootcamp-dogs/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/react-bootcamp-dogs/static/css/2.69121389.chunk.css.map",
-    "static/css/main.4320ffbe.chunk.css.map": "/react-bootcamp-dogs/static/css/main.4320ffbe.chunk.css.map",
-    "static/js/2.12045a22.chunk.js.LICENSE.txt": "/react-bootcamp-dogs/static/js/2.12045a22.chunk.js.LICENSE.txt"
+    "static/css/main.70382b8a.chunk.css.map": "/react-bootcamp-dogs/static/css/main.70382b8a.chunk.css.map",
+    "static/js/2.fa221dae.chunk.js.LICENSE.txt": "/react-bootcamp-dogs/static/js/2.fa221dae.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8eaeebfe.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.12045a22.chunk.js",
-    "static/css/main.4320ffbe.chunk.css",
-    "static/js/main.2e1fb926.chunk.js"
+    "static/js/2.fa221dae.chunk.js",
+    "static/css/main.70382b8a.chunk.css",
+    "static/js/main.4ebbc494.chunk.js"
   ]
 }
