@@ -5,19 +5,19 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle
 } from 'reactstrap';
-import { Row,Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const DogDetails = (props) => {
     const selectedDog = props.match.params.writtenDogId;
     const showDogs = dogs.find((dog) => dog.id === selectedDog)
-    if(!showDogs){
-    return <h2>{selectedDog} dogs not found!</h2>
+    if (!showDogs) {
+        return <h2>{selectedDog} dogs not found!</h2>
     }
     return (
         <div>
             <Row>
                 <Col xs={12} md={6}>
-                <Dog {...showDogs} disabledFavoriteFeature={true} disabledDetails={true}/>
+                    <Dog {...showDogs} disabledFavoriteFeature={true} disabledDetails={true} showAge={true}/>
 
                 </Col>
             </Row>

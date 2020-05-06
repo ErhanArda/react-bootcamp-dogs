@@ -9,30 +9,32 @@ import {
 
 
 
-const Dog = ({ id, name, image, description, toggle, getStatus, disabledButton, disabledFavoriteFeature,disabledDetails }) => {
+const Dog = ({ id, name, image, age, description, toggle, getStatus, disabledButton, disabledFavoriteFeature, disabledDetails, showAge }) => {
     return (
-        <div key={id} style={{margin:"15px"}}>
+        <div key={id} style={{ margin: "15px" }}>
 
             <Card>
-                <CardImg top width="100%" src={image} alt={name} className="dog-image"/>
+                <CardImg top width="100%" src={image} alt={name} className="dog-image" />
                 <CardBody>
                     <CardTitle>
                         <span>
                             {name}
                         </span>
                     </CardTitle>
+                    {
+                        showAge && <CardText showAge={showAge}> {age} </CardText>
+                    }
                     <CardText>
                         {description}
                     </CardText>
                     {
-                        
                         !disabledDetails && <Button color="primary" className="a" disabledDetails={disabledDetails}>
-                        <Link to={`/details/${id}`}>
-                            Details
+                            <Link to={`/details/${id}`}>
+                                Details
                             </Link>
-                    </Button>}
+                        </Button>}
                     {
-                        !disabledFavoriteFeature && <FavoriteActions toggle={toggle} id={id} getStatus={getStatus} disabledButton={disabledButton}/>
+                        !disabledFavoriteFeature && <FavoriteActions toggle={toggle} id={id} getStatus={getStatus} disabledButton={disabledButton} />
                     }
 
                 </CardBody>
