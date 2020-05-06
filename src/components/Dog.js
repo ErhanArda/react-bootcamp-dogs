@@ -5,7 +5,6 @@ import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import styles from "./styles.css"
 
 
 
@@ -25,7 +24,7 @@ const Dog = ({ id, name, image, description, toggle, getStatus, disabledButton, 
                     <CardText>
                         {description}
                     </CardText>
-                    <Button color="primary">
+                    <Button color="primary" className="a">
                         <Link to={`/details/${id}`}>
                             Details
                             </Link>

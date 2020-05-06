@@ -8,7 +8,7 @@ import HomePage from './containers/HomePage';
 import About from './containers/About';
 import FilteredDogs from './containers/FilteredDogs';
 import { Container } from 'reactstrap';
-
+import './App.css'
 class App extends Component {
 
   render() {
