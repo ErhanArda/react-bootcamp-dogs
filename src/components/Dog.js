@@ -8,7 +8,6 @@ import {
 
 
 
-
 const Dog = ({ id, name, image, age, description, toggle, getStatus, disabledButton, disabledFavoriteFeature, disabledDetails, showAge }) => {
     return (
         <div key={id} style={{ margin: "15px" }}>
@@ -42,5 +41,7 @@ const Dog = ({ id, name, image, age, description, toggle, getStatus, disabledBut
         </div>
     )
 }
-
+// Dog.prototypes = {
+//     id: PropTypes.string.isRequired,
+// }
 export default Dog
