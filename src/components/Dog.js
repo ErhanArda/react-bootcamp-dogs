@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import FavoriteActions from '../components/FavoriteActions'
 import { Link } from "react-router-dom"
 import {
@@ -41,7 +42,14 @@ const Dog = ({ id, name, image, age, description, toggle, getStatus, disabledBut
         </div>
     )
 }
-// Dog.prototypes = {
-//     id: PropTypes.string.isRequired,
-// }
+Dog.propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string
+};
+
+Dog.defaultProps = {
+    id: "404 not found",
+    name: "404 not found"
+}
 export default Dog
